@@ -39,6 +39,13 @@ blog/bin/
 #Other Files
 *.ini
 
+# Spring
+application.yml
+application.properties
+
+#Logs
+8.log
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 /.metadata/
