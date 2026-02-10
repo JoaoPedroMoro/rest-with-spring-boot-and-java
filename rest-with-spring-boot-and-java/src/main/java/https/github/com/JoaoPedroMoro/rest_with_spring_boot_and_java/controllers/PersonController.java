@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/person")
+@RequestMapping("/api/person/v1")
 public class PersonController {
 
     @Autowired
@@ -42,15 +42,15 @@ public class PersonController {
 
     }
 
-    @PostMapping(value ="/v2",
-            consumes = MediaType.APPLICATION_JSON_VALUE, // Se não especificarmos, quando o swagger for gerar a documentação da API, ele vai ser perder
-            produces = MediaType.APPLICATION_JSON_VALUE
-    )
-    public PersonDTOv2 create(@RequestBody PersonDTOv2 person) {
-
-        return service.createv2(person);
-
-    }
+//    @PostMapping(value ="/v2",
+//            consumes = MediaType.APPLICATION_JSON_VALUE, // Se não especificarmos, quando o swagger for gerar a documentação da API, ele vai ser perder
+//            produces = MediaType.APPLICATION_JSON_VALUE
+//    )
+//    public PersonDTOv2 create(@RequestBody PersonDTOv2 person) {
+//
+//        return service.createv2(person);
+//
+//    }
 
     @PutMapping(
             consumes = MediaType.APPLICATION_JSON_VALUE, // Se não especificarmos, quando o swagger for gerar a documentação da API, ele vai ser perder
