@@ -1,6 +1,6 @@
 package https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.controllers;
 
-import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.model.Person;
+import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.data.dto.PersonDTO;
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.services.PersonServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -19,14 +19,14 @@ public class PersonController {
     // private PersonServices service = new PersonServices();
 
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Person findById(@PathVariable("id") Long id) {
+    public PersonDTO findById(@PathVariable("id") Long id) {
 
         return service.findById(id);
 
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Person> findAll() {
+    public List<PersonDTO> findAll() {
 
         return service.findAll();
 
@@ -36,7 +36,7 @@ public class PersonController {
             consumes = MediaType.APPLICATION_JSON_VALUE, // Se não especificarmos, quando o swagger for gerar a documentação da API, ele vai ser perder
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-    public Person create(@RequestBody Person person) {
+    public PersonDTO create(@RequestBody PersonDTO person) {
 
         return service.create(person);
 
@@ -46,7 +46,7 @@ public class PersonController {
             consumes = MediaType.APPLICATION_JSON_VALUE, // Se não especificarmos, quando o swagger for gerar a documentação da API, ele vai ser perder
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-    public Person update(@RequestBody Person person) {
+    public PersonDTO update(@RequestBody PersonDTO person) {
 
         return service.update(person);
 
