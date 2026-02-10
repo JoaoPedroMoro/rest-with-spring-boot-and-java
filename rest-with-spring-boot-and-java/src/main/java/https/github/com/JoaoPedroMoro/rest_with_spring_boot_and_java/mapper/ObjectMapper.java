@@ -22,7 +22,7 @@ public class ObjectMapper {
 
         for (Object o : origin) {
 
-            destinationObjects.add(mapper.map(origin, destination));
+            destinationObjects.add(mapper.map(o, destination));
 
         }
 
