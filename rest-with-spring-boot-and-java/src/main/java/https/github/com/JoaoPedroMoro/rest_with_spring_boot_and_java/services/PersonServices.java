@@ -1,9 +1,12 @@
 package https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.services;
 
-import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.data.dto.PersonDTO;
+import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.data.dto.v1.PersonDTO;
+import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.data.dto.v2.PersonDTOv2;
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.exception.ResourceNotFoundException;
 import static https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.mapper.ObjectMapper.parseListObjects;
 import static https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.mapper.ObjectMapper.parseObject;
+
+import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.mapper.custom.PersonMapper;
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.model.Person;
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.repository.PersonRepository;
 import org.slf4j.LoggerFactory;
@@ -21,6 +24,9 @@ public class PersonServices {
 
     @Autowired
     PersonRepository repository;
+
+    @Autowired
+    PersonMapper converter;
 
 
     public List<PersonDTO> findAll() {
@@ -45,6 +51,14 @@ public class PersonServices {
         var entity = parseObject(person, Person.class);
 
         return parseObject(repository.save(entity), PersonDTO.class);
+    }
+
+    public PersonDTOv2 createv2(PersonDTOv2 person) {
+
+        logger.info("Creating one Person v2!");
+        var entity = converter.convertDTOToEntity(person);
+
+        return converter.convertoEntityToDTO(repository.save(entity));
     }
 
     public PersonDTO update(PersonDTO person) {

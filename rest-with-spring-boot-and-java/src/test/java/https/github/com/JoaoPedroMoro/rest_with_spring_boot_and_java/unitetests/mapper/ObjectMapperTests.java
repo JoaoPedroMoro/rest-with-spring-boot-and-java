@@ -1,6 +1,6 @@
 package https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.unitetests.mapper;
 
-import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.data.dto.PersonDTO;
+import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.data.dto.v1.PersonDTO;
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.model.Person;
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.unitetests.mapper.mocks.MockPerson;
 import org.junit.jupiter.api.BeforeEach;

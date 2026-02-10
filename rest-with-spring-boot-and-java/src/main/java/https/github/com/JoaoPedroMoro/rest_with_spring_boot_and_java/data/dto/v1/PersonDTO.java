@@ -1,4 +1,4 @@
-package https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.data.dto;
+package https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.data.dto.v1;
 
 import java.io.Serializable;
 import java.util.Objects;
