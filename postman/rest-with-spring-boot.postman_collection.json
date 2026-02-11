@@ -270,6 +270,34 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "Get 2 header param yaml",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/yaml",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/person/v1/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "person",
+            "v1",
+            "2"
+          ]
+        }
+      },
+      "response": []
     }
   ]
 }
