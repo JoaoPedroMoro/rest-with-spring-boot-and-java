@@ -158,6 +158,62 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "Get 2 com media type xml",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/person/v1/2?mediaType=xml",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "person",
+            "v1",
+            "2"
+          ],
+          "query": [
+            {
+              "key": "mediaType",
+              "value": "xml"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get 2 com media type json",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/person/v1/2?mediaType=json",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "person",
+            "v1",
+            "2"
+          ],
+          "query": [
+            {
+              "key": "mediaType",
+              "value": "json"
+            }
+          ]
+        }
+      },
+      "response": []
     }
   ]
 }
