@@ -298,6 +298,172 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "Saving a person with yaml",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/yaml",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/yaml",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "---\r\nfirstName: \"Luka\"\r\nlastName: \"Doncic\"\r\naddress: \"Eslôvenia\"\r\ngender: \"Male\"\r\n",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/person/v1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "person",
+            "v1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Saving a person with xml",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/xml",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/xml",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<PersonDTO>\r\n    <firstName>Endrick</firstName>\r\n    <lastName>Felipe</lastName>\r\n    <address>Brasil</address>\r\n    <gender>Male</gender>\r\n</PersonDTO>",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/person/v1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "person",
+            "v1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Adjusting a person with xml",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/xml",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/xml",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<PersonDTO>\r\n    <id>10</id>\r\n    <firstName>Endrick Felipe</firstName>\r\n    <lastName>Moreira</lastName>\r\n    <address>Brasil</address>\r\n    <gender>Male</gender>\r\n</PersonDTO>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/person/v1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "person",
+            "v1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Saving a person with json",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/xml",
+            "type": "text",
+            "disabled": true
+          },
+          {
+            "key": "Accept",
+            "value": "application/xml",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n        \"address\": \"Brasil\",\r\n        \"firstName\": \"Endrick\",\r\n        \"gender\": \"Male\",\r\n        \"id\": 10,\r\n        \"lastName\": \"Moreira\"\r\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/person/v1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "person",
+            "v1"
+          ]
+        }
+      },
+      "response": []
     }
   ]
 }
