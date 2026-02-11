@@ -1,20 +1,20 @@
-package https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.data.dto.v2;
+package https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.data.dto;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.Objects;
 
-public class PersonDTOv2 implements Serializable {
+public class PersonDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
+
     private Long id;
     private String firstName;
     private String lastName;
-    private Date birthDay;
     private String address;
     private String gender;
 
-    public PersonDTOv2() { }
+    public PersonDTO() { }
+
 
     public String getGender() {
         return gender;
@@ -56,24 +56,15 @@ public class PersonDTOv2 implements Serializable {
         this.id = id;
     }
 
-    public Date getBirthDay() {
-        return birthDay;
-    }
-
-    public void setBirthDay(Date birthDay) {
-        this.birthDay = birthDay;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        PersonDTOv2 that = (PersonDTOv2) o;
-        return Objects.equals(getId(), that.getId()) && Objects.equals(getFirstName(), that.getFirstName()) && Objects.equals(getLastName(), that.getLastName()) && Objects.equals(getBirthDay(), that.getBirthDay()) && Objects.equals(getAddress(), that.getAddress()) && Objects.equals(getGender(), that.getGender());
+        PersonDTO personDTO = (PersonDTO) o;
+        return Objects.equals(getId(), personDTO.getId()) && Objects.equals(getFirstName(), personDTO.getFirstName()) && Objects.equals(getLastName(), personDTO.getLastName()) && Objects.equals(getAddress(), personDTO.getAddress()) && Objects.equals(getGender(), personDTO.getGender());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getFirstName(), getLastName(), getBirthDay(), getAddress(), getGender());
+        return Objects.hash(getId(), getFirstName(), getLastName(), getAddress(), getGender());
     }
-
 }

@@ -1,14 +1,12 @@
 package https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.controllers;
 
-import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.data.dto.v1.PersonDTO;
-import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.data.dto.v2.PersonDTOv2;
+import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.data.dto.PersonDTO;
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.services.PersonServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -21,11 +19,7 @@ public class PersonController {
 
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public PersonDTO findById(@PathVariable("id") Long id) {
-
-        // Setando a data como do dia atual
-        var person = service.findById(id);
-        person.setBirthDay(new Date());
-        return person;
+        return service.findById(id);
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
@@ -42,16 +36,6 @@ public class PersonController {
         return service.create(person);
 
     }
-
-//    @PostMapping(value ="/v2",
-//            consumes = MediaType.APPLICATION_JSON_VALUE, // Se não especificarmos, quando o swagger for gerar a documentação da API, ele vai ser perder
-//            produces = MediaType.APPLICATION_JSON_VALUE
-//    )
-//    public PersonDTOv2 create(@RequestBody PersonDTOv2 person) {
-//
-//        return service.createv2(person);
-//
-//    }
 
     @PutMapping(
             consumes = MediaType.APPLICATION_JSON_VALUE, // Se não especificarmos, quando o swagger for gerar a documentação da API, ele vai ser perder

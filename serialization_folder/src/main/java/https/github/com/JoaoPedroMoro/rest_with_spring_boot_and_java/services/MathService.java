@@ -1,6 +1,5 @@
 package https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.services;
 
-import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.exception.UnsupportedMathOperationException;
 import org.springframework.stereotype.Service;
 
 /**
