@@ -25,7 +25,7 @@ DELETE /person/{id}
 
 ## Executando o projeto
 1. Crie um banco de dados no MySQL
-2. Copie o arquivo `application.yml.example` para `application.yml`
+2. Copie o arquivo `application.yml.example` para `application.yml` e `pom.example.txt` para `pom.xml`
 3. Atualize as credenciais do banco de dados
 4. Execute a aplicação
 
