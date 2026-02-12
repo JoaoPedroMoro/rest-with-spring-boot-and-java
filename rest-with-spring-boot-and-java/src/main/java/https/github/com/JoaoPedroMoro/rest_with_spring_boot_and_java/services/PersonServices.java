@@ -2,6 +2,7 @@ package https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.services;
 
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.controllers.PersonController;
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.data.dto.PersonDTO;
+import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.exception.RequiredObjectIsNullException;
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.exception.ResourceNotFoundException;
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.model.Person;
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.repository.PersonRepository;
@@ -52,6 +53,8 @@ public class PersonServices {
 
     public PersonDTO create(PersonDTO person) {
 
+        if (person == null) throw new RequiredObjectIsNullException();
+
         logger.info("Creating one Person!");
         var entity = parseObject(person, Person.class);
 
@@ -63,6 +66,9 @@ public class PersonServices {
     }
 
     public PersonDTO update(PersonDTO person) {
+
+        if (person == null) throw new RequiredObjectIsNullException();
+
         logger.info("Updating one person!");
 
         Person entity = repository.findById(person.getId())

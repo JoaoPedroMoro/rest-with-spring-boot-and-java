@@ -1,6 +1,7 @@
 package https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.services;
 
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.data.dto.PersonDTO;
+import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.exception.RequiredObjectIsNullException;
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.model.Person;
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.repository.PersonRepository;
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.unitetests.mapper.mocks.MockPerson;
@@ -195,6 +196,19 @@ class PersonServicesTest {
     }
 
     @Test
+    void testCreateWithNullPerson() {
+        Exception exception = assertThrows(RequiredObjectIsNullException.class,
+                () -> {
+                    service.create(null);
+                });
+
+        String expectedMessage = "It's not allowed to persist a null object";
+        String actualMessage = exception.getMessage();
+
+        assertTrue(actualMessage.contains(expectedMessage));
+    }
+
+    @Test
     void update() {
 
         Person person = input.mockEntity(1);
@@ -258,6 +272,19 @@ class PersonServicesTest {
         assertEquals("Address Test1", result.getAddress());
         assertEquals("Female", result.getGender());
 
+    }
+
+    @Test
+    void testUpdateWithNullPerson() {
+        Exception exception = assertThrows(RequiredObjectIsNullException.class,
+                () -> {
+                    service.update(null);
+                });
+
+        String expectedMessage = "It's not allowed to persist a null object";
+        String actualMessage = exception.getMessage();
+
+        assertTrue(actualMessage.contains(expectedMessage));
     }
 
     @Test
