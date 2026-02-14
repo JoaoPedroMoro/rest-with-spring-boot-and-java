@@ -19,7 +19,7 @@ public class Book implements Serializable {
 
     @Column(name = "launch_date", nullable = false, length = 6)
     @Temporal(TemporalType.DATE)
-    private String launchDate;
+    private Date launchDate;
 
     @Column(name = "price", nullable = false)
     private Double price;
@@ -45,11 +45,11 @@ public class Book implements Serializable {
         this.author = author;
     }
 
-    public String getLaunchDate() {
+    public Date getLaunchDate() {
         return launchDate;
     }
 
-    public void setLaunchDate(String launchDate) {
+    public void setLaunchDate(Date launchDate) {
         this.launchDate = launchDate;
     }
 
