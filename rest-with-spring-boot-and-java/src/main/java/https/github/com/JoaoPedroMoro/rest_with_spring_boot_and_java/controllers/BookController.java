@@ -2,8 +2,7 @@ package https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.controller
 
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.controllers.docs.BookControllerDocs;
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.data.dto.BookDTO;
-import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.model.Book;
-import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.services.BookServices;
+import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.unittests.services.BookServices;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

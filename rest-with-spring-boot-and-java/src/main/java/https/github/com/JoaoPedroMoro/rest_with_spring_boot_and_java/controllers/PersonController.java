@@ -2,7 +2,7 @@ package https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.controller
 
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.controllers.docs.PersonControllerDocs;
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.data.dto.PersonDTO;
-import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.services.PersonServices;
+import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.unittests.services.PersonServices;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

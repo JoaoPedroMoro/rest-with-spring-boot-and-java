@@ -1,4 +1,4 @@
-package https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.unitetests.mapper.mocks;
+package https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.unittests.mapper.mocks;
 
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.data.dto.BookDTO;
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.model.Book;

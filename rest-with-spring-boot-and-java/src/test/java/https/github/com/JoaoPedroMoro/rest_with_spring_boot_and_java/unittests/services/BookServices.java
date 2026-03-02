@@ -1,10 +1,10 @@
-package https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.services;
+package https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.unittests.services;
 
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.data.dto.BookDTO;
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.exception.RequiredObjectIsNullException;
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.model.Book;
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.repository.BookRepository;
-import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.unitetests.mapper.mocks.MockBook;
+import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.unittests.mapper.mocks.MockBook;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;

@@ -1,4 +1,4 @@
-package https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.services;
+package https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.unittests.services;
 
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.controllers.PersonController;
 import https.github.com.JoaoPedroMoro.rest_with_spring_boot_and_java.data.dto.PersonDTO;
